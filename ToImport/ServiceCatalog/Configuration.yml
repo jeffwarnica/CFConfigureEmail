@@ -1,0 +1,34 @@
+---
+- Configuration:
+    name: Configuration
+    description: 
+    template:
+    - name: Email Configurator
+      description: Email Configurator
+      type: 
+      display: true
+      service_type: atomic
+      prov_type: generic
+      provision_cost: 
+      long_description: ''
+      options: {}
+      service_template_catalog_name: Configuration
+      resource_actions:
+      - action: Retirement
+        ae_namespace: Service/Retirement/StateMachines
+        ae_class: ServiceRetirement
+        ae_instance: Default
+        ae_message: 
+        ae_attributes:
+          :service_action: Retirement
+        dialog_label: rhc_configure_email
+      - action: Provision
+        ae_namespace: Code/StateMachines
+        ae_class: UpdateConfigs
+        ae_instance: UpdateConfigs
+        ae_message: 
+        ae_attributes:
+          :service_action: Provision
+        dialog_label: rhc_configure_email
+      custom_buttons: []
+      custom_button_sets: []

@@ -1,0 +1,48 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: UpdateEmailConfigs
+    inherits: 
+    description: 
+  fields:
+  - instances:
+      value: "[/MyEmailDomain/AutomationManagement/AnsibleTower/Service/Provisioning/Email/servicetemplateprovisionrequest_approved,
+        /MyEmailDomain/AutomationManagement/AnsibleTower/Service/Provisioning/Email/serviceprovision_complete,
+        /MyEmailDomain/Cloud/Orchestration/Provisioning/Email/servicetemplateprovisionrequest_approved,
+        /MyEmailDomain/Cloud/Orchestration/Provisioning/Email/serviceprovision_complete,
+        /MyEmailDomain/Cloud/Orchestration/Reconfiguration/Email/servicereconfigure_complete,
+        /MyEmailDomain/Cloud/Orchestration/Reconfiguration/Email/servicereconfigurerequest_approved,
+        /MyEmailDomain/Cloud/Orchestration/Retirement/Email/stack_retirement_emails,
+        /MyEmailDomain/Cloud/VM/Provisioning/Email/miqprovisionrequest_approved, /MyEmailDomain/Cloud/VM/Provisioning/Email/miqprovisionrequest_denied,
+        /MyEmailDomain/Cloud/VM/Provisioning/Email/miqprovisionrequest_pending, /MyEmailDomain/Cloud/VM/Provisioning/Email/miqprovision_complete,
+        /MyEmailDomain/Cloud/VM/Retirement/Email/vm_retirement_emails, /MyEmailDomain/Cloud/VM/Retirement/Email/vm_retire_extend,
+        /MyEmailDomain/ConfigurationManagement/AnsibleTower/Service/Provisioning/Email/servicetemplateprovisionrequest_approved,
+        /MyEmailDomain/ConfigurationManagement/AnsibleTower/Service/Provisioning/Email/serviceprovision_complete,
+        /MyEmailDomain/Control/Email/miq_server_alert, /MyEmailDomain/Control/Email/vm_alert,
+        /MyEmailDomain/Control/Email/ems_cluster_alert, /MyEmailDomain/Control/Email/storage_alert,
+        /MyEmailDomain/Control/Email/parse_alerts, /MyEmailDomain/Control/Email/ext_management_system_alert,
+        /MyEmailDomain/Control/Email/host_alert, /MyEmailDomain/Infrastructure/Cluster/Operations/Methods/cluster_workload_management,
+        /MyEmailDomain/Infrastructure/Configured_System/Provisioning/Email/provision_complete,
+        /MyEmailDomain/Infrastructure/Configured_System/Provisioning/Email/request_pending,
+        /MyEmailDomain/Infrastructure/Configured_System/Provisioning/Email/request_approved,
+        /MyEmailDomain/Infrastructure/Configured_System/Provisioning/Email/request_denied,
+        /MyEmailDomain/Infrastructure/Host/Operations/Methods/host_evacuation, /MyEmailDomain/Infrastructure/Host/Provisioning/Email/miqhostprovision_complete,
+        /MyEmailDomain/Infrastructure/Host/Provisioning/Email/miqhostprovisionrequest_approved,
+        /MyEmailDomain/Infrastructure/VM/Migrate/Email/vmmigraterequest_approved,
+        /MyEmailDomain/Infrastructure/VM/Migrate/Email/vmmigratetask_complete, /MyEmailDomain/Infrastructure/VM/Operations/Methods/vm_placement_optimization,
+        /MyEmailDomain/Infrastructure/VM/Provisioning/Email/miqprovisionrequest_approved,
+        /MyEmailDomain/Infrastructure/VM/Provisioning/Email/miqprovisionrequest_denied,
+        /MyEmailDomain/Infrastructure/VM/Provisioning/Email/miqprovisionrequest_pending,
+        /MyEmailDomain/Infrastructure/VM/Provisioning/Email/miqprovision_complete,
+        /MyEmailDomain/Infrastructure/VM/Reconfigure/Email/vmreconfiguretaskcomplete,
+        /MyEmailDomain/Infrastructure/VM/Reconfigure/Email/vmreconfigurerequestapproved,
+        /MyEmailDomain/Infrastructure/VM/Retirement/Email/vm_retirement_emails, /MyEmailDomain/Infrastructure/VM/Retirement/Email/vm_retire_extend,
+        /MyEmailDomain/Service/Provisioning/Email/servicetemplateprovisionrequest_approved,
+        /MyEmailDomain/Service/Provisioning/Email/serviceprovision_complete, /MyEmailDomain/Service/Provisioning/Email/servicetemplateprovisionrequest_pending,
+        /MyEmailDomain/Service/Provisioning/Email/servicetemplateprovisionrequest_warning,
+        /MyEmailDomain/Service/Provisioning/Email/servicetemplateprovisionrequest_denied]"
+  - execute:
+      value: UpdateEmailConfigs
