@@ -52,13 +52,26 @@ def update_instances(ae_uri)
 end
 
 
-dump_root()
+begin
+  dump_root()
 
-@from_email_address = $evm.root['dialog_from_email_address'] || error('no dialog_from_email_address passed')
-@to_email_address = $evm.root['dialog_to_email_address'] || error('no dialog_to_email_address passed')
-@signature = $evm.root['dialog_signature'] || error('no dialog_signature passed')
+  @from_email_address = $evm.root['dialog_from_email_address'] || error('no dialog_from_email_address passed')
+  @to_email_address = $evm.root['dialog_to_email_address'] || error('no dialog_to_email_address passed')
+  @signature = $evm.root['dialog_signature'] || error('no dialog_signature passed')
 
-log(:info, "instances" + $evm.object['instances'].inspect)
+  log(:info, "instances" + $evm.object['instances'].inspect)
 
-instances = $evm.object['instances']
-instances.each { |ae_uri| update_instances(ae_uri) }
+  instances = $evm.object['instances']
+  instances.each { |ae_uri| update_instances(ae_uri) }
+
+#
+# Set Ruby rescue behavior
+#
+rescue => err
+  log(:error, "[#{err}]\n#{err.backtrace.join("\n")}")
+  exit MIQ_ABORT
+ensure
+  # nuke the service record regardless.
+  $evm.root['service'].remove_from_vmdb
+
+end

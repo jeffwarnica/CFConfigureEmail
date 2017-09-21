@@ -12,7 +12,7 @@ as the email signatures.
 
 Get yourself an export of the stock Datastores, and build out the .zip per:
 
-`./createEmailDomain.rb -r ~/Projects/CFLAB/datastore/ -d RHCEmailConfiguration -e you+cflab@yourdomain.com`
+`./createEmailDomain.rb -r ~/Projects/  CFLAB/datastore/ -d RHCEmailConfiguration -e you+cflab@yourdomain.com`
 
 Import the created .zip file with Automate->Automate->Import Export.
 
